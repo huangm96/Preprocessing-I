@@ -144,18 +144,23 @@ h5 {
   font-family: 'Notable', sans-serif;
 }
 .home {
-  width: 80vw;
+  width: 800px;
   margin: 0 auto;
   font-size: 10px;
+}
+@media (max-width: 800px) {
+  .home {
+    width: 80vw;
+  }
 }
 h1 {
   font-size: 3em;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8em;
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1.6em;
 }
 header {
   width: 100%;
@@ -169,6 +174,7 @@ header nav {
   justify-content: space-between;
 }
 header a {
+  padding: 5px 20px;
   text-decoration: none;
   color: black;
   font-size: 1.5em;
@@ -183,27 +189,60 @@ header a:hover {
   }
 }
 @media (max-width: 500px) {
-  header a {
+  header {
+    margin: 0 0 5px 0;
+  }
+  header nav {
     width: 100%;
+    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
+  }
+  header nav a {
+    padding: 10px 0;
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid lightgrey;
   }
 }
 .top-content {
   width: 100%;
+  padding: 20px;
   background: lightgrey;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+.top-content .myphoto {
+  margin: 30px;
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  .top-content .myphoto {
+    width: 60%;
+    height: auto;
+  }
+}
+.top-content .top-content-text {
+  display: flex;
+  flex-direction: column;
+}
 .top-content .top-content-text p {
   padding: 10px 20px 0 20px;
 }
-.top-content button {
-  margin: 30px 20px;
-  padding: 7px 10px;
+.top-content .top-content-text a {
+  margin: 30px  auto 30px 20px;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  text-decoration: none;
   color: white;
   background: grey;
+}
+.top-content .top-content-text a:hover {
+  background: black;
 }
 .middle-content {
   margin: 20px 0;
@@ -215,21 +254,60 @@ header a:hover {
   width: 45%;
 }
 .middle-content li {
-  font-size: 1.1rem;
+  font-size: 1.6em;
   padding: 15px 5px;
   border: 1px solid lightgrey;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .middle-content section {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 .bottom-content {
   width: 100%;
 }
+.bottom-content .work-history-table-small {
+  display: none;
+}
 .bottom-content table {
   width: 100%;
+  text-align: center;
+}
+.bottom-content .big-table tr:nth-child(even) {
+  background: lightgrey;
+}
+.bottom-content th {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 0;
 }
 .bottom-content tr {
   border: 1px solid lightgrey;
 }
 .bottom-content td {
+  font-size: 1.3em;
   padding: 15px 5px;
+}
+@media (max-width: 500px) {
+  .bottom-content .work-history-table-big {
+    display: none;
+  }
+  .bottom-content .work-history-table-small {
+    width: 100%;
+    display: block;
+  }
+  .bottom-content .work-history-table-small th {
+    width: 50%;
+  }
+  .bottom-content .work-history-table-small .table1,
+  .bottom-content .work-history-table-small .table3 {
+    background: lightgrey;
+  }
 }
 footer {
   margin: 20px 0;
@@ -238,5 +316,5 @@ footer {
   text-align: center;
 }
 footer p {
-  font-size: 0.7rem;
+  font-size: 1em;
 }
